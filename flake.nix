@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
-    thelab-pods.url = "path:./TheLab-Pods";
+    freesiaOS-profiles.url = "github:FreesiaOS/profiles";
 
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -12,12 +12,12 @@
     };
   };
 
-  outputs = { nixpkgs, thelab-pods, zen-browser, ... } @inputs: {
+  outputs = { nixpkgs, freesiaOS-profiles, zen-browser, ... } @inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
-        thelab-pods.nixosModules.default
+        freesiaOS-profiles.nixosModules.default
         ./configuration.nix
       ];
     };
