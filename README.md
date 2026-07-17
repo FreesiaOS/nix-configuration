@@ -9,3 +9,4 @@ The initial idea to try and reach that goal is to provide the following:
 - A modular Nix configuration (this repository)
 - A Nix module that allows enabling currated system settings based on common user profiles ([Profiles repository](https://github.com/FreesiaOS/profiles))
 - A set of GUI applications to manage that modular nix configuration + profiles + package installation. This work may or may not reuse existing projects trying to adress those same topics.
+- A custom simplified installer to setup the configuration and first user + apps.
